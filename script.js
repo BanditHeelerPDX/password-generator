@@ -1,4 +1,6 @@
 // Assignment code here
+
+//Declare global variables
 let tinyDigis = '';
 for (let i = 97; i <= 122; ++i) {
   tinyDigis += String.fromCharCode(i);
@@ -21,26 +23,28 @@ for (let i = 63; i <=64; ++i) {
 }
 
 
-//let lowercase = (tinyDigis);
-//let uppercase = (bigDigis);
-//let special = (notDigis);
-//let digis = (Digis);
-//let extraSpecial = (alsoNotDigis);
 
-
-
-
-
-
-
-
+//Write function to generate password using appropriate logic
 function generatePassword() {
-  let passwordlength = prompt('Please enter the desired length of your password as a digit between 8 and 128.');
-  let tiny = confirm('Would you like for your password to contain any non-capitalized letters? Cancel for No.');
-  let big = confirm('Would you like for your password to contain capital letters? Cancel for No.');
-  let spec = confirm('Would you like for your password to contain special characters? Cancel for No.');
-  let xtspec = confirm('Would you like for your password to contain any extra special characters? Ok for yes.');
+  let passwordLength = prompt('Please enter the desired length of your password as a digit between 8 and 128.');
+  let lowercase = confirm('Would you like for your password to contain any non-capitalized letters? Cancel for No.');
+  let uppercase = confirm('Would you like for your password to contain capital letters? Cancel for No.');
+  let special = confirm('Would you like for your password to contain special characters? Cancel for No.');
+  let xtspecial = confirm('Would you like for your password to contain any extra special characters? Ok for yes.');
   let numbas = confirm('Would you like for your password to contain any numbers? Cancel for No.');
+  
+  let characters = '';
+  if (lowercase) characters += tinyDigis;
+  if (uppercase) characters += bigDigis;
+  if (special) characters += notDigis;
+  if (xtspecial) characters += alsoNotDigis;
+  if (numbas) characters += Digis;
+
+  let password = '';
+  for (let i = 0; i < passwordLength; ++i) {
+    password += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+  return password;
 
 }
 
