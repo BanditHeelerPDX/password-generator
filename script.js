@@ -1,5 +1,4 @@
 // Assignment code here
-
 //Declare global variables
 let tinyDigis = '';
 for (let i = 97; i <= 122; ++i) {
@@ -21,9 +20,6 @@ let alsoNotDigis = '';
 for (let i = 63; i <=64; ++i) {
   alsoNotDigis += String.fromCharCode(i);
 }
-
-
-
 //Write function to generate password using appropriate logic
 function generatePassword() {
   let passwordLength = prompt('Please enter the desired length of your password as a digit between 8 and 128.');
@@ -47,10 +43,8 @@ function generatePassword() {
   return password;
 
 }
-
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -59,6 +53,5 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
