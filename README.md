@@ -2,7 +2,7 @@
 
 ## Description
 
-Generating random passwords, while crucial to information security, can be difficult and time-consuming.  This project uses Math.random to create reasonably randomized passwords customized to the users inputs for length and character content.  [It totally looks like this!](https://banditheelerpdx.github.io/password-generator)
+Generating random passwords, while crucial to information security, can be difficult and time-consuming.  This project uses Math.random to create reasonably randomized passwords customized to the users inputs for length and character content.  [It totally looks like this!](in-action.PNG)
 
 ## License
 
